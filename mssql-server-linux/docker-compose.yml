@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  mssql-server-linux:
+    image: microsoft/mssql-server-linux:2017-latest
+    volumes:
+      - ./data:/var/opt/mssql
+    ports:
+      - "1433:1433"
+    restart: always
+    network_mode: bridge
+    environment:
+      SA_PASSWORD: pass123$$
+      MSSQL_PID: Developer
+      ACCEPT_EULA: Y
