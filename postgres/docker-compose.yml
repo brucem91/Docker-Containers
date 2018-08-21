@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: library/postgres:latest
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: always
+    network_mode: bridge
+    environment:
+      POSTGRES_PASSWORD: pass123$$
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - "5434:80"
+    restart: always
+    network_mode: bridge
+    environment: 
+      PGADMIN_DEFAULT_EMAIL: user@example.com
+      PGADMIN_DEFAULT_PASSWORD: pass123$$

@@ -16,7 +16,7 @@ CD into directory
 
     cd Docker-Containers
 
-Each container follows the same pattern. To start MySQL (for example)
+Each service follows the same pattern. To start MySQL (for example)
 
     cd mysql
     docker-compose up -d
@@ -25,6 +25,6 @@ And to powerdown a service:
 
     docker-compose down
 
-Or to completely remove the server:
+Or to completely remove the service:
 
     docker-compose down --remove-orphans

@@ -10,6 +10,6 @@ services:
     restart: always
     network_mode: bridge
     environment:
-      SA_PASSWORD: pass123$$
+      SA_PASSWORD: MySecretP@ssword$$
       MSSQL_PID: Developer
       ACCEPT_EULA: Y
