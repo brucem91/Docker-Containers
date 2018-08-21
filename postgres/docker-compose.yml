@@ -4,7 +4,7 @@ services:
     image: library/postgres:latest
     hostname: postgres
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     restart: unless-stopped
@@ -17,7 +17,7 @@ services:
     ports:
       - "5555:80"
     volumes: 
-      - ./pgadmin-data:/var/lib/pgadmin
+      - ./data/pgadmin:/var/lib/pgadmin
     restart: unless-stopped
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
