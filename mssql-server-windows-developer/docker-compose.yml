@@ -2,9 +2,9 @@ version: "3.3"
 
 services:
   mssql-server-windows-express:
-    image: microsoft/mssql-server-windows-express
+    image: microsoft/mssql-server-windows-developer
     # volumes:
-    #   - ./data:C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL
+    #   - ./data:/var/opt/mssql
     ports:
       - "1433:1433"
     restart: always
