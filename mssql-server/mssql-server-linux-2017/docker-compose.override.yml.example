@@ -1,0 +1,6 @@
+version: "3.3"
+
+services:
+  mssql-server-linux-2017:
+    environment:
+      SA_PASSWORD: MySecretP@ssword$$

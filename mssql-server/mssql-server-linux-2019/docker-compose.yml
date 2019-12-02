@@ -3,9 +3,7 @@ version: "3.3"
 services:
   mssql-server-linux-2019:
     container_name: mssql-linux-2019
-    image: mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
-    # volumes:
-      # - ./data:/var/opt/mssql
+    image: mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ports:
       - "1433:1433"
     restart: always
